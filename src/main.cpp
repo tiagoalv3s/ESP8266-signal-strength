@@ -3,6 +3,8 @@
 #include <ESP8266WiFi.h>
 #include <ESP8266WebServer.h>
 #include <DNSServer.h>
+#include "ThingSpeak.h"
+#include "secrets.h"
 
 const char* ssid = "ssid";
 const char* password = "password";
