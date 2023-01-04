@@ -9,8 +9,8 @@
 const char* ssid = "ssid";
 const char* password = "password";
 
-unsigned long channel = CHANNEL_ID;
-const char* apiKey = "write API key";
+unsigned long channel = 0000000;
+const char* apiKey = "Your write API key";
 
 WiFiClient client;
 
