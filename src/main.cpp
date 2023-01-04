@@ -9,6 +9,9 @@
 const char* ssid = "ssid";
 const char* password = "password";
 
+unsigned long channel = CHANNEL_ID;
+const char* apiKey = "write API key";
+
 WiFiClient client;
 
 void setup() {
@@ -27,5 +30,15 @@ void setup() {
 }
 
 void loop() {
+    long rssi = WiFi.RSSI();
 
+    int http = ThingSpeak.writeField(channel, 1, rssi, apiKey);
+
+    if (http == 200){
+        Serial.println("Write done.");
+    } else {
+        Serial.println("Error" + String(http));
+    }
+
+    delay(20000);
 }
