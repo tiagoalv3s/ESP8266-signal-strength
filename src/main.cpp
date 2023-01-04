@@ -9,6 +9,8 @@
 const char* ssid = "ssid";
 const char* password = "password";
 
+WiFiClient client;
+
 void setup() {
     Serial.begin(115200);
     delay(10);
@@ -20,6 +22,8 @@ void setup() {
         Serial.print(".");
     }
     Serial.println(" Connected!");
+
+    ThingSpeak.begin(client);
 }
 
 void loop() {
