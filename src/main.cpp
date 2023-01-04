@@ -1,3 +1,7 @@
+/*****************************************
+ * ESP8266 SIGNAL STRENGTH VISUALIZATION *
+ *****************************************/
+
 #include <Arduino.h>
 #include <ESP8266WiFi.h>
 #include <ESP8266WiFi.h>
@@ -9,6 +13,7 @@
 const char* ssid = "ssid";
 const char* password = "password";
 
+// Channel ID number and API key provided by ThingSpeak
 unsigned long channel = 0000000;
 const char* apiKey = "Your write API key";
 
